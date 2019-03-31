@@ -1,1 +1,14 @@
 /* -- Your Styles Here -- */
+
+body {
+  padding: 48px;
+}
+
+#caption-input {
+width: 400px;
+height: 200px;  
+}
+
+#caption-input span.empty {
+  background: yellow;
+}
