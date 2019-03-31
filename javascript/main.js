@@ -14,9 +14,11 @@
         //   document.execCommand("copy");
         // }
 
+    new ClipboardJS('#caption-input');
+
 $(document).ready(function(){
 
-    new ClipboardJS('#caption-input');
+
 
 
     $('#convert').click(function(){
