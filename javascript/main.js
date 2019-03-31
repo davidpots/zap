@@ -15,6 +15,10 @@
         // }
 
 $(document).ready(function(){
+
+    new ClipboardJS('#caption-input');
+
+
     $('#convert').click(function(){
 
         // Preserve line breaks via invisible character
