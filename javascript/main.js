@@ -14,7 +14,7 @@
         //   document.execCommand("copy");
         // }
 
-    new ClipboardJS('#caption-input');
+    new ClipboardJS('#convert');
 
 $(document).ready(function(){
 
