@@ -14,11 +14,11 @@
         //   document.execCommand("copy");
         // }
 
-    new ClipboardJS('#convert');
+
 
 $(document).ready(function(){
 
-
+    new ClipboardJS('#convert');
 
 
     $('#convert').click(function(){
