@@ -2,6 +2,7 @@
 
 body {
   background: #E0F7FA;
+  transition: background-color .5s;
 }
 
 .container {
@@ -44,4 +45,8 @@ button {
 }
 button:hover {
   cursor: pointer;
+}
+
+#reset {
+  display: none;
 }

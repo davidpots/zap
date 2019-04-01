@@ -3,7 +3,8 @@ window.onload=function(){
     function copyToClipboard() {
         var clipboard = new ClipboardJS('.copyButton');
         clipboard.on('success', function(e) {
-          $('body').css('background-color','#ffffaa');
+          // $('body').css('background-color','#E2D5FA');
+          $('#reset').fadeIn('fast');
           window.getSelection().removeAllRanges(); // deselects the text
           console.log(e);
         });
