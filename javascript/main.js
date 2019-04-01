@@ -20,6 +20,13 @@ window.onload=function(){
         console.log("Input parsed!");
     }
 
+
+    var div = document.getElementById('captionInput');
+    setTimeout(function() {
+        div.focus();
+    }, 0);
+
+
     $('#convert').click(function(e){
         preserveCaptionLineBreaks();
         copyToClipboard();
