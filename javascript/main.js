@@ -13,15 +13,17 @@ window.onload=function(){
     }
 
     function preserveCaptionLineBreaks() {
-        var someText = $('#caption-input').text();
-        someText = someText.replace(/(\r\n|\n|\r)/gm, '\u2800\r\n');
-        $('#caption-input').text(someText);
+        // var someText = $('#captionInput').text();
+        var someText = $('#captionInput').html().replace(/<div>/g,'\r\n').replace(/<\/div>/g,'').replace(/(<|&lt;)br\s*\/*(>|&gt;)/g,'');
+        someText = someText.replace(/(\r\n|\n|\r)/gm, '\u2800\n');
+        $('#captionInput').text(someText);
         console.log("Input parsed!");
     }
 
-    $('#convert').click(function(){
+    $('#convert').click(function(e){
         preserveCaptionLineBreaks();
         copyToClipboard();
+        e.preventDefault();
     });
 }
 

@@ -1,20 +1,47 @@
 /* -- Your Styles Here -- */
 
 body {
-  padding: 48px;
+  background: #E0F7FA;
 }
 
-  /* #caption-input {
-  width: 400px;
-  height: 200px;
-  } */
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+}
 
-#caption-input {
-  border: 1px solid black;
-  padding: 10px;
-  white-space: pre;
+#captionInput {;
+  white-space: pre-wrap;
+  min-height: 400px;
+
+  background: #fff;
+  font-size: 21px;
+  padding: 28px;
+  border-radius: 24px;
+  box-shadow: 0px 4px 24px rgb(0,0,0,0.1);
+}
+
+#captionInput:focus {
+  outline: none;
 }
 
 #caption-input span.empty {
   background: yellow;
+}
+
+button {
+  padding: 16px 21px;
+  background: #ED3E7B;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 auto;
+  display: block;
+  border-bottom: 1px solid white;
+  border-top: 1px solid #CD1E5B;
+}
+button:hover {
+  cursor: pointer;
 }
