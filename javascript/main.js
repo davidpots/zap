@@ -16,42 +16,44 @@
 
 window.onload=function(){
 
-var clipboard = new ClipboardJS('.copyButton');
-clipboard.on('success', function(e) {
-  console.log(e);
-});
-clipboard.on('error', function(e) {
-  console.log(e);
-});
 
+
+
+
+
+        var clipboard = new ClipboardJS('.copyButton');
+        clipboard.on('success', function(e) {
+          console.log(e);
+        });
+        clipboard.on('error', function(e) {
+          console.log(e);
+        });
+
+
+
+
+    // $('#convert').click(function(){
+    //
+    //     // Preserve line breaks via invisible character
+    //     var someText = $('#caption-input').text();
+    //     someText = someText.replace(/(\r\n|\n|\r)/gm, '\u2800\r\n');
+    //     $('#caption-input').text(someText);
+    //     console.log("Input parsed!");
+    //
+    //
+    //     // Copy to clipboard!
+    //
+    //
+    //
+    //
+    //     // $('#caption-input').select()
+    //     // document.execCommand("copy");
+    //     // console.log("Copied to clipboard!")
+    //     // $('body').append('<em>copied to clipboard!</em>');
+    //
+    //     return false;
+    // });
 }
-
-$(document).ready(function(){
-
-
-
-
-
-
-    $('#convert').click(function(){
-
-        // Preserve line breaks via invisible character
-        var someText = $('#caption-input').val();
-        someText = someText.replace(/(\r\n|\n|\r)/gm, '\u2800\r\n');
-        $('#caption-input').val(someText);
-        console.log("Input parsed!");
-
-
-
-        // Copy to clipboard!
-        // $('#caption-input').select()
-        // document.execCommand("copy");
-        // console.log("Copied to clipboard!")
-        // $('body').append('<em>copied to clipboard!</em>');
-
-        return false;
-    });
-});
 
     //
     // var hiddenField = document.getElementById("hiddenInput");
