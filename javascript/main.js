@@ -1,3 +1,30 @@
+window.onload=function(){
+
+    function copyToClipboard() {
+        var clipboard = new ClipboardJS('.copyButton');
+        clipboard.on('success', function(e) {
+          $('body').css('background-color','#ffffaa');
+          window.getSelection().removeAllRanges(); // deselects the text
+          console.log(e);
+        });
+        clipboard.on('error', function(e) {
+          console.log(e);
+        });
+    }
+
+    function preserveCaptionLineBreaks() {
+        var someText = $('#caption-input').text();
+        someText = someText.replace(/(\r\n|\n|\r)/gm, '\u2800\r\n');
+        $('#caption-input').text(someText);
+        console.log("Input parsed!");
+    }
+
+    $('#convert').click(function(){
+        preserveCaptionLineBreaks();
+        copyToClipboard();
+    });
+}
+
 // String.prototype.splice = function(idx, rem, str) {
 //     return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
 // };
@@ -14,32 +41,7 @@
         //   document.execCommand("copy");
         // }
 
-window.onload=function(){
 
-
-
-
-
-
-        var clipboard = new ClipboardJS('.copyButton');
-        clipboard.on('success', function(e) {
-          console.log(e);
-        });
-        clipboard.on('error', function(e) {
-          console.log(e);
-        });
-
-
-
-
-    // $('#convert').click(function(){
-    //
-    //     // Preserve line breaks via invisible character
-    //     var someText = $('#caption-input').text();
-    //     someText = someText.replace(/(\r\n|\n|\r)/gm, '\u2800\r\n');
-    //     $('#caption-input').text(someText);
-    //     console.log("Input parsed!");
-    //
     //
     //     // Copy to clipboard!
     //
@@ -51,9 +53,8 @@ window.onload=function(){
     //     // console.log("Copied to clipboard!")
     //     // $('body').append('<em>copied to clipboard!</em>');
     //
-    //     return false;
-    // });
-}
+        // return false;
+
 
     //
     // var hiddenField = document.getElementById("hiddenInput");
