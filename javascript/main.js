@@ -14,11 +14,23 @@
         //   document.execCommand("copy");
         // }
 
+window.onload=function(){
 
+var clipboard = new ClipboardJS('.copyButton');
+clipboard.on('success', function(e) {
+  console.log(e);
+});
+clipboard.on('error', function(e) {
+  console.log(e);
+});
+
+}
 
 $(document).ready(function(){
 
-    new ClipboardJS('#convert');
+
+
+
 
 
     $('#convert').click(function(){
@@ -29,11 +41,13 @@ $(document).ready(function(){
         $('#caption-input').val(someText);
         console.log("Input parsed!");
 
+
+
         // Copy to clipboard!
-        $('#caption-input').select()
-        document.execCommand("copy");
-        console.log("Copied to clipboard!")
-        $('body').append('<em>copied to clipboard!</em>');
+        // $('#caption-input').select()
+        // document.execCommand("copy");
+        // console.log("Copied to clipboard!")
+        // $('body').append('<em>copied to clipboard!</em>');
 
         return false;
     });

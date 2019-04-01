@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- Javascript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
     <script src="javascript/main.js"></script>
 
   </head>
@@ -43,7 +43,18 @@ And here we are! Just pressed return twice, down to the thing. Let's press retur
 
 
 #once #twice #threetimes #fourfivesix</textarea>
-<p><a id="convert" data-clipboard-target="#caption-input" href="#">convert & copy</a></p>
+<p><a id="convert" data-clipboard-action="copy" data-clipboard-target="#caption-input" class="copyButton" href="#">convert & copy</a></p>
+
+<hr />
+
+<div id="copy">
+    @item.Type
+    Name...: @item.Name
+    Address: @item.Address
+</div>
+
+<button class="copyButton" id="copyButtonId" data-id="@item.Type"
+ data-clipboard-action="copy" data-clipboard-target="div#copy">Copy!</button>
 
   </body>
 </html>
