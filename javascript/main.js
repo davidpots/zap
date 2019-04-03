@@ -30,11 +30,10 @@ window.onload=function(){
         console.log("Input parsed!");
     }
 
-
-
     $('#convert').click(function(e){
         preserveCaptionLineBreaks();
         copyToClipboard();
+        $('#convert').text("Converted!");
         e.preventDefault();
     });
 }
