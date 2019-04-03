@@ -61,3 +61,5 @@ body {
 #reset {
   display: none;
 }
+
+.footer li { font-size: 14px;}

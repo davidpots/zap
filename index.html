@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137611825-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137611825-1');
+</script>
+
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
@@ -25,19 +37,53 @@
   <body>
 
     <div class="container">
-    <p style="text-align: center;">Get your captions looking just like you like 'em.</p>
+    <h2 style="line-height: 1.2; text-align: center; margin-top: 16px;">Tired of Instagram messing with your line breaks?</h2>
+    <p style="text-align: center;">Your troubles are over. Type a caption below, click the button, and copy into Instagram. All white space will be preserved.</p>
     <h3 id="captionInput" placeholder="Your caption here..." contenteditable="true" spellcheck="false"></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div style="text-align: center;">
       <span id="convert" data-clipboard-action="copy" data-clipboard-target="#captionInput" class="copyButton">Convert for Instragram</span>
     </div>
     <div id="reset">
-      <p style='text-align:center; font-size: 12px;'><em>Caption copied to your clipboard.<br />Go paste it in an Instagram post, or stash it <br />in your Notes app for later.</em></p>
+      <p style='text-align:center; font-size: 12px;'>✅ Caption copied to your clipboard.</p>
       <p style="text-align: center; font-size: 12px;"><a style="text-decoration: none;" href="">Reset & write another 👉</a></p>
     </div>
 
-<hr />
-<br />
-<textarea style="width: 80%; height: 200px"></textarea>
+    <br />
+    <p style="font-size: 12px; text-align: center;">Made by <a href="http://twitter.com/davidpots.com">David Potsiadlo</a>.</p>
+    <br />
+    <hr />
+    <br />
+    <h4>Editor's Notes</h4>
+    <ul class="footer">
+      <li><strong>Apr 2, 2019</strong> - embarrasing MVP launched! This is the first web tool I've built in a year or so, so the last few hours involved shaking off a bit of Javascript rust. For now, the central functionality of preserving line breaks seems to be working. Likewise, copying to clipboard (on iOS devices too) is working. The next big thing I want to add, from a functionality POV, is adding Slack-like UX for typing emojis. This would solve for the dreadful state of emoji typing on desktop. And after that, a pass at visual design / branding / etc. Look for some of these updates coming within the week - follow me on Twitter if you're interested in keeping up with things.</li>
+    </ul>
+
+
 
   </div>
 
