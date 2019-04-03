@@ -1,13 +1,5 @@
 window.onload=function(){
 
-    $("#captionInput").focusout(function(){
-        var element = $(this);
-        if (!element.text().trim().length) {
-            element.empty();
-        }
-    });
-
-
     function copyToClipboard() {
         var clipboard = new ClipboardJS('.copyButton');
         clipboard.on('success', function(e) {
@@ -29,6 +21,11 @@ window.onload=function(){
         console.log("Input parsed!");
     }
 
+
+    var div = document.getElementById('captionInput');
+    setTimeout(function() {
+        div.focus();
+    }, 0);
 
 
     $('#convert').click(function(e){

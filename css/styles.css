@@ -1,8 +1,9 @@
 /* -- Your Styles Here -- */
 
 body {
-  background: #E0F7FA;
-  transition: background-color .5s;
+  background: #FFF;
+  font-family:  sans-serif;
+  color: #222;
 }
 
 .container {
@@ -13,35 +14,45 @@ body {
 
 #captionInput {;
   white-space: pre-wrap;
-  min-height: 400px;
-
+  min-height: 300px;
   background: #fff;
   font-size: 21px;
   padding: 28px;
-  border-radius: 24px;
-  box-shadow: 0px 4px 24px rgb(0,0,0,0.05);
+  border-radius: 6px;
+  font-weight: normal;
+  border: 1px solid #222;
+  border-right-width: 3px;
+  border-bottom-width: 3px;
 }
 
 #captionInput:focus {
   outline: none;
 }
 
-#caption-input span.empty {
-  background: yellow;
+[placeholder]:empty::before {
+    content: attr(placeholder);
+    color: #bbb;
 }
+
+[placeholder]:empty:focus::before {
+    content: "";
+}
+
 
 button {
   padding: 16px 21px;
-  background: #ED3E7B;
+  background: #147793;
   color: white;
   border: none;
-  border-radius: 12px;
+  border-radius: 4px;
   font-weight: bold;
   font-size: 16px;
   margin: 0 auto;
   display: block;
-  border-bottom: 1px solid white;
-  border-top: 1px solid #CD1E5B;
+  border: 1px solid #025773;
+  border-right-width: 3px;
+  border-bottom-width: 3px;
+  font-family: 'Nunito', sans-serif;
 }
 button:hover {
   cursor: pointer;
