@@ -1,12 +1,13 @@
 window.onload=function(){
 
+    // Mimics placeholder attribute on the caption box, if not a textarea
+    // https://stackoverflow.com/questions/20726174/placeholder-for-contenteditable-div
     $("#captionInput").focusout(function(){
         var element = $(this);
         if (!element.text().trim().length) {
             element.empty();
         }
     });
-
 
     function copyToClipboard() {
         var clipboard = new ClipboardJS('.copyButton');

@@ -39,7 +39,7 @@ body {
 }
 
 
-button {
+.copyButton {
   padding: 16px 21px;
   background: #147793;
   color: white;
@@ -47,14 +47,14 @@ button {
   border-radius: 4px;
   font-weight: bold;
   font-size: 16px;
-  margin: 0 auto;
   display: block;
   border: 1px solid #025773;
   border-right-width: 3px;
   border-bottom-width: 3px;
   font-family: 'Nunito', sans-serif;
+  display: inline-block;
 }
-button:hover {
+.copyButton:hover {
   cursor: pointer;
 }
 
